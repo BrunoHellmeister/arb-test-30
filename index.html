@@ -1,0 +1,239 @@
+<html lang="pt">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>⚖️ Secured Arbitration Online </title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+    <header>
+      <section id="texto">
+        <h1 class="textoImportante">Registro e Gestão do Procedimento de Arbitragem</h1>
+      </section>
+    </header>    
+    <section>
+      <img src="http://www.maritimeissues.com/temp/-uploaded-EU_Philippine-delegation-arbitration-court-maritime-dispute-south-china-sea-west-philippine-sea_cr_420x270.jpg" alt="Arbitration" />
+      <br><br/>
+      <p class="textoMarca textoTitulo">Confidencialidade e segurança na disputa e transparência no processo</p>
+      <p class="textoMarca" style="font-size:255%;"> 
+      </p>
+      <br/><br/>
+      <div id="botaoConexao">
+        <button id="btnConectaMetamask" style="font-size:70%" onclick="conectaAoMetamask();">Para interagir com o processo eletrônico, conecte-se ao 🦊 Metamask </button>
+      </div><br/>
+    </section>
+    <section>
+      <p class="textoImportante">
+        <form name="formPartes" id="formPartes">
+          <fieldset>
+            <legend class="textoImportante"style="font-size:100%">Partes da Arbitragem &nbsp;</legend>
+            <br/>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Registrar Endereço Ethereum do Requerente: </label>
+              <br>
+              <input type="text" id="_enderecoRequerente" name="_enderecoRequerente" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRegRequerente" class="textoImportante" style="font-size:70%" onclick="registrarRequerente();" disabled>💾 Registrar Requerente</button>
+            </div>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Retirar Endereço Ethereum do Requerente: </label>
+              <br>
+              <input type="text" id="_enderecoRequerente" name="_enderecoRequerente" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRetRequerente" class="textoImportante" style="font-size:70%" onclick="retirarRequerente();" disabled>⛔ Retirar Requerente</button>
+            </div>
+            <br><br>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Registrar Endereço Ethereum da Requerida: </label>
+              <br>
+              <input type="text" id="_enderecoRequerida" name="_enderecoRequerida" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRegRequerida" class="textoImportante" style="font-size:70%" onclick="registrarRequerida();" disabled>💾 Registrar Requerida</button>
+            </div>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Retirar Endereço Ethereum da Requerida: </label>
+              <br>
+              <input type="text" id="_enderecoRequerida" name="_enderecoRequerida" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRetRequerida" class="textoImportante" style="font-size:70%" onclick="retirarRequerida();" disabled>⛔ Retirar Requerida</button>
+            </div>
+            </div>
+          </fieldset>
+        </form>
+        <form name="formTribuanl" id="formTribunal">
+          <fieldset>
+            <legend class="textoImportante"style="font-size:100%">Tribunal Arbitral &nbsp;</legend>
+            <br/>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Registrar Endereço Ethereum de Co-Árbitro: </label>
+              <br>
+              <input type="text" id="_coarbitroIndicado" name="_coarbitroIndicado" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRegCoArb" class="textoImportante" style="font-size:70%" onclick="designarCoArbitro();" disabled>💾 Salvar</button>
+            </div>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Registrar Endereço Ethereum de Árbitro Presidente: </label>
+              <br>
+              <input type="text" id="_arbitroPresidenteIndicado" name="_arbitroPresidenteIndicado" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRegArbPresi" class="textoImportante" style="font-size:70%" onclick="designarArbitroPresidente();" disabled>💾 Salvar</button>
+            </div>
+            <br><br>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Impugnar Endereço Ethereum do Co-Árbitro: </label>
+              <br>
+              <input type="text" id="_endereco" name="_endereco" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRetCoArb" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>⛔ Impugnar Co-Árbitro</button>
+            </div>
+            <div id="divEndereco">
+              <label for="_endereco" class="textoImportante"style="font-size:80%"> Impugnar Endereço Ethereum de Árbitro Presidente: </label>
+              <br>
+              <input type="text" id="_endereco" name="_endereco" size="60" maxlength="60" >
+            </div>
+            <div>
+              <button id="btnSalvarRetArbPresi" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>⛔ Impugnar Árbitro Presidente</button>
+            </div><br>
+            <div id="divEndereco">
+              <label for="opcao" class="textoImportante"style="font-size:80%"> Assinar Sentença como Co-Árbitro: (insira o código de assinatura)</label>
+              <br>
+              <input type="number" id="opcaoCoArb" name="opcaoCoArb" size="60" maxlength="60" >
+            </div>
+            <div>
+                <button id="btnSalvarAssinaCoArb" class="textoImportante" style="font-size:70%" onclick="assinarSentencaCoArbitro();" disabled>🖋️ Assinar</button>
+            </div>
+            <div id="divEndereco">
+              <label for="opcao" class="textoImportante"style="font-size:80%"> Assinar Sentença como Árbitro Presidente: (insira o código de assinatura)</label>
+              <br>
+              <input type="number" id="opcaoArbPresidente" name="opcaoArbPresidente" size="60" maxlength="60" >
+            </div>
+            <div>
+                <button id="btnSalvarAssinaArbPresi" class="textoImportante" style="font-size:70%" onclick="assinarSentencaArbitroPresidente();" disabled>🖋️ Assinar</button>
+            </div>
+            </div>
+          </fieldset>
+        </form>
+        <form name="formCustas" id="formCustas">
+          <fieldset>
+            <legend class="textoImportante"style="font-size:100%">Custas relacionadas ao processo de Arbitragem &nbsp;</legend>
+            <br/>
+            <div id="divEndereco">
+              <label class="textoImportante"style="font-size:80%"> Status do Pagamento da Taxa de Requerimento: <strong id="statusPagamentoDoRequerimento"></strong></label>
+            </div>
+            <div>
+              <label class="textoImportante" style="font-size:80%">Número de Mensalidades pagas pela Requerente: <strong id="statusPagamentoMensalRequerente.lengh"></strong></label>
+              <br>
+            <div>
+            <div><br><br>
+              <label class="textoImportante" style="font-size:80%">Número de Mensalidades pagas pela Requerida: <strong id="statusPagamentoMensalRequerida.lengh"></strong></label>
+              <br>
+            </div>
+            <div>
+              <label for="_valorVenal" class="textoImportante" style="font-size:80%">Inserir Valor de Honorários dos Árbitros (por Parte da Arbitragem): ETH </label>
+              <input type="number" name="_valorVenal" id="_valorVenal">
+            </div>
+            <div>
+              <button id="btnSalvarHonorario" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💾 Registrar</button>
+            </div>
+            <div>
+              <label for="_valorVenal" class="textoImportante" style="font-size:80%">Inserir Valor das Custas da Audiência (por Parte da Arbitragem): ETH </label>
+              <input type="number" name="_valorVenal" id="_valorVenal">
+            </div>
+            <div>
+              <button id="btnSalvarCustasAudiencia" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💾 Registrar</button>
+            </div><br>
+            <div>
+              <label for="_valorVenal" class="textoImportante" style="font-size:80%">Para verificar se há pendencia, insira a duração em meses do processo de arbitragem </label>
+              <input type="number" name="_valorVenal" id="_valorVenal">
+            </div>
+            <div>
+              <button id="btnVerificar" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>🔄 Verificar</button>
+            </div>
+            </div>
+          </fieldset>
+        </form>
+        <form name="formPagamentos" id="formPagamentos">
+          <fieldset>
+            <legend class="textoImportante"style="font-size:100%">Pagamentos das custas relacionadas ao processo arbitral &nbsp;</legend>
+            <br/>
+            <div>
+              <label for="amount" class="textoImportante" style="font-size:80%">Pagar Taxa de Requerimento de Arbitragem: ETH </label>
+              <input type="number" name="taxaDeRequerimento" id="taxaDeRequerimento" value="1000000000000000"> in wei>
+            </div>
+            <div>
+              <div>
+                <button id="btnPagarRequerimento" class="textoImportante" style="font-size:70%" onclick="pagarTaxaDeRequerimento();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Mensalidade devida pela Requerente: ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                <button id="btnPagarMesRequerente" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Mensalidade devida pela Requerida: ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                  <button id="btnPagarMesRequerida" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Honorários dos Árbitros devidos pela Requerente: ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                  <button id="btnPagarHonorariosRequerente" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Honorários dos Árbitros devidos pela Requerida ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                  <button id="btnPagarHonorariosRequerida" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Custas da Audiência devidas pela Requerente ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                  <button id="btnPagarAudienciaRequerente" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+              <div>
+                <label for="_valorVenal" class="textoImportante" style="font-size:80%">Pagar Custas da Audiência devidas pela Requerida ETH </label>
+                <input type="number" name="_valorVenal" id="_valorVenal">
+              </div>
+              <div>
+                  <button id="btnPagarAudienciaRequerida" class="textoImportante" style="font-size:70%" onclick="salvarRegistro();" disabled>💱 Pagar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </p>           
+    </section>
+    <section id="statusTransacoes" style="display: none;">
+      <div>
+        Status processamento da transação no Ethereum:&nbsp;<span id="descricaoStatusTransacoes">&nbsp;</span>
+      </div>
+    </section>
+    <footer>
+      <hr>
+        <small class="textoImportante" style="font-size:60%">📜&nbsp;<i>© Bruno Hellmeister Lico Canal todos os direitos reservados</i></small>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <!-- Importacao da biblioteca Ethers.js para nos auxiliar na comunicacao com o Ethereum -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js" type="text/javascript"></script>
+    <script src="dados-contratos-inteligentes.js"></script>
+    <script src="blockchain-infra.js"></script>
+    <script src="blockchain.js"></script>
+   </body>
+</html>

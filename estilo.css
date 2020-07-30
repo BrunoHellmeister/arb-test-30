@@ -1,0 +1,57 @@
+body {
+  background-color: rgb(6, 29, 58);
+    color: rgb(222, 239, 241);
+}
+
+h1 {
+  text-align: center;
+  font-size: 200%;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+footer {
+  text-align: center;
+  padding: 1px;
+}
+
+img {
+  max-width: 100%;
+}
+
+div {
+  margin-bottom: 25px;
+}
+
+#texto {
+  text-align: center;
+}
+
+.textoImportante {
+  color: rgb(77, 161, 66);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic
+  font-weight: bold;
+}
+
+.textoMarca {
+  color: rgb(77, 161, 66);
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic
+  font-weight: bold;
+  font-size: 125%;
+}
+
+.textoMetamask {
+  color: rgb(77, 161, 66);
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 100%;
+}
+
+.textoTitulo {
+  text-align: center;
+}
+
